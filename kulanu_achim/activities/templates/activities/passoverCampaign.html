@@ -1,0 +1,35 @@
+{% extends "mainPage/index.html" %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/activitiesImage.jpg' %}{% endblock %}
+{% block header_title %}קמפיין פסח{% endblock %}
+
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-12">
+    <h2>קמפיין פסח</h2>
+    <hr class="my-4"/>
+    <p>
+        מדי שנה בפסח, באופן זהה לקמפיין ראש השנה,
+        עמותת כולנו אחים פותחת בקמפיין אריזה וחלוקה של סלי מזון.
+        האירוע מתקיים בהשתתפות אירגוני התנדבות רבים ואישי ציבור, בניהם: פר"ח, ארגון בת עמי, בית ספר מקצועי ארזים, ועוד.
+    </p>
+    <p>
+        כחלק מהקמפיין, מתוך הצלחת התיאום בקמפיין ראש השנה,
+        התיאום המלא עם אגף הרווחה ביבנה נמשך על מנת לאפשר חלוקת סלי
+        מזון מדויקת למשפחות הרלוונטיות.
+        שת"פ זה נעשה מתוך הכרה בחשיבות זהות המשפחות המקבלות את סלי המזון,
+        כדי לאפשר חלוקה למשפחות אשר זקוקות לסלי המזון באמת.
+    </p>
+    <p>
+        במהלך הקמפיין חילקנו עשרות סלי מזון למשפחות נזקקות.
+        ובנוסף, המשכנו במגמה של גיוס מתנדבים חדשים.
+    </p>
+    <div class="image-container">
+        <img src="{% static 'assets/img/campaign_images/passover/image1.jpg' %}">
+        <img src="{% static 'assets/img/campaign_images/passover/image2.jpg' %}">
+        <img src="{% static 'assets/img/campaign_images/passover/image3.jpg' %}">
+    </div>
+</div>
+{% endblock content %}

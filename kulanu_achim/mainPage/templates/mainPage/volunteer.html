@@ -1,0 +1,27 @@
+{% extends "mainPage/index.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/volunteerImage.jpg' %}{% endblock %}
+{% block header_title %}התנדבות{% endblock %}
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-7">
+    <!-- Post preview-->
+    <div class="post-preview">
+        <a>
+            <h2 class="post-title">רוצים להתנדב?</h2>
+            <h3 class="post-subtitle">השאירו פרטים ואנחנו כבר נחזור אליכם</h3>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-success mt-2" type="submit">שלח</button>
+            </form>
+        </a>
+    </div>
+    <p>
+        אפשר גם <a href="{% url 'contactPage' %}">ליצור איתנו קשר</a>.
+    </p>
+</div>
+{% endblock content %}

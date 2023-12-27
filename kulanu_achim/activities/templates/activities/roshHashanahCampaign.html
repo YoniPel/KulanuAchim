@@ -1,0 +1,50 @@
+{% extends "mainPage/index.html" %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/activitiesImage.jpg' %}{% endblock %}
+{% block header_title %}קמפיין ראש השנה{% endblock %}
+
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-12">
+    <h2>קמפיין ראש השנה</h2>
+    <hr class="my-4"/>
+    <p>
+        מדי שנה בראש השנה, עמותת כולנו אחים מקיימת אירוע אריזה וחלוקה מסיבי של עשרות סלי מזון עשירים.
+        האירוע מתקיים בהשתתפות אירגוני התנדבות ואישי ציבור, בניהם: פר"ח, ארגון בת עמי, בית ספר מקצועי ארזים, ועוד.
+    </p>
+    <p>
+        כחלק מהקמפיין, נעשה תיאום מלא עם אגף הרווחה ביבנה על מנת לאפשר חלוקת סלי מזון מדויקת למשפחות הרלוונטיות.
+        שת"פ זה נעשה מתוך הכרה בחשיבות זהות המשפחות המקבלות את סלי המזון,
+        כדי לאפשר חלוקה למשפחות אשר זקוקות לסלי המזון באמת.
+    </p>
+    <p>
+        במהלך הקמפיין חילקנו מעל 100 סלי מזון למשפחות נזקקות.
+        ובנוסף, עשרות מתנדבים חדשים הצטרפו לעמותה ומעל 20 קווי חלוקה נסעו
+        ברחבי העיר לחלק את סלי המזון עד לפתח ביתם של המשפחות.
+    </p>
+    <div class="image-container">
+        <img src="{% static 'assets/img/campaign_images/roshHashanah/image1.jpg' %}">
+        <img src="{% static 'assets/img/campaign_images/roshHashanah/image2.jpg' %}">
+        <img src="{% static 'assets/img/campaign_images/roshHashanah/image3.jpg' %}">
+    </div>
+
+    <p>
+        סגן ראש העיר יבנה מברך את כולנו אחים בקמפיין ראש השנה.
+    </p>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <!-- Your embedded video player code -->
+    <div class="fb-video"
+         data-href="https://fb.watch/oWI42d6SJV/"
+         data-width="700" data-height="500" data-show-text="false">
+        <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://fb.watch/oWI42d6SJV/">
+                <a href="https://fb.watch/oWI42d6SJV/">
+                    אלי מזוז מברך את כולנו אחים</a>
+            </blockquote>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

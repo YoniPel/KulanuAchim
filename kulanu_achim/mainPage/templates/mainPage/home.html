@@ -1,0 +1,128 @@
+{% extends "mainPage/index.html" %}
+{% block content %}
+{% load static %}
+<!-- Main Content-->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for image_url in images_urls %}
+        <div class="swiper-slide">
+            <img src="{{ image_url }}" alt="image">
+        </div>
+        {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div>-->
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <hr>
+
+</div>
+
+<div class="col-md-10 col-lg-8 col-xl-10">
+    <!-- Post preview-->
+    <div class="post-preview">
+        <a>
+            <div class="icon-heading-container">
+                <i class="fa-solid fa-house" style="margin-left: 10px; font-size: 27px"></i>
+                <h2 class="post-title">קצת עלינו</h2>
+            </div>
+            <p>
+                "הדבר הכי גדול בעולם הוא לעשות טובה למישהו אחר"
+                <span style="font-size: 12px">(האדמו"ר מפיאסצנה)</span>
+            </p>
+            <div class="content-container">
+                <p>
+                    כולנו אחים הינה עמותה העוסקת בתהליך שיקום כלכלי של משפחות הנמצאות במעגל העוני.
+                    <br><br>
+                    מטרת העמותה היא לבנות ביחד עם המשפחה תהליך שיקום הכולל מעטפת הנוגעת בכלל הקשיים היום-יומיים איתם
+                    מתמודדת המשפחה.
+                    <br><br>
+                    העמותה מקדמת את מטרותיה בעזרת שיתופי פעולה עם חברות שונות, ארגונים מקצועיים, וכל גורם המסייע לקדם את
+                    הפעילות השוטפת.
+                    <br><br>
+                    חלק עיקרי בתהליך הוא מתן ייעוץ וחינוך פיננסי הנעשה באמצעות שיתוף פעולה עם ארגון
+                    "<a href="https://mekimi.org.il/">מקימי</a>"
+                    , ארגון אשר מתמחה בתחום זה.
+                </p>
+                <img class='image' src="{% static 'assets/img/info/homePageImage.jpg' %}" alt='תמונה לעמוד בית'>
+            </div>
+            <p>
+                בנוסף, העמותה מספקת סלי מזון באופן שבועי למשפחות הנזקקות לכך,
+                אך מטרת העל של העמותה היא ליווי כל משפחה מתחילת דרכה בתהליך השיקום
+                ועד לעמידה מוחלטת על הרגליים באופן עצמאי, ללא תלות בגורמים אחרים.
+                <br><br>
+                העמותה נוסדה ב2021. כדי לקרוא עלינו בהרחבה,
+                <a href="{% url 'aboutPage' %}">לחצו כאן</a>.
+            </p>
+        </a>
+    </div>
+    <!-- Divider-->
+    <hr class="my-4"/>
+    <!-- Post preview-->
+    <div class="post-preview">
+        <a>
+            <div class="icon-heading-container">
+                <i class="fa-solid fa-location-dot" style="margin-left: 10px; font-size: 27px;"></i>
+                <h2 class="post-title">מוקדי פעילות</h2>
+            </div>
+            <p>נכון להיום, העמותה פועלת באזור במרכז הארץ, חזון העמותה הוא להתרחב לכל קצוות הארץ.</p>
+        </a>
+    </div>
+    <!-- Divider-->
+    <hr class="my-4"/>
+    <!-- Post preview-->
+    <div class="post-preview">
+        <a>
+            <div class="icon-heading-container" style="margin-button: 5px;">
+                <i class="fa-solid fa-hand-holding-dollar" style="margin-left: 10px; font-size: 27px"></i>
+                <h2 class="post-title">תרומות</h2>
+            </div>
+            <p>
+                רוצים להוציא משפחה ממעגל העוני? אפשר <a href="{% url 'donationPage' %}">לתרום</a>.
+            </p>
+            <p>
+                בנוסף, ניתן לתרום פריטים אשר אין בהם צורך.
+            </p>
+
+        </a>
+    </div>
+    <hr class="my-4"/>
+    <div class="post-preview">
+        <a>
+            <div class="icon-heading-container">
+                <i class="fa-solid fa-handshake-angle" style="margin-left: 10px; font-size: 27px;"></i>
+                <h2 class="post-title">התנדבות</h2>
+            </div>
+            <p>
+                רוצים לקחת חלק בהוצאת משפחה לחיים חדשים?
+                <br><br>
+                מוזמנים לבדוק את <a href="{% url 'volunteerPage' %}">איך אפשר לעזור</a>.
+            </p>
+        </a>
+    </div>
+
+    <hr class="my-4"/>
+    <div class="post-preview">
+        <a>
+            <div class="icon-heading-container">
+                <i class="fa-solid fa-hands-holding-child" style="margin-left: 10px; font-size: 27px;"></i>
+                <h2 class="post-title">קמפיינים</h2>
+            </div>
+            <p>מוזמנים לקרוא על הקמפיינים שלנו <a href="{% url 'activitiesPage' %}">כאן</a>.</p>
+        </a>
+    </div>
+
+    <hr class="my-4"/>
+    <div class="post-preview">
+        <div class="icon-heading-container">
+            <i class="fa-solid fa-circle-info" style="margin-left: 10px; font-size: 27px;"></i>
+            <h2 class="post-title">אודות</h2>
+        </div>
+        <p><a href="{% url 'aboutPage' %}">אודות כולנו אחים בהרחבה</a>.</p>
+    </div>
+</div>
+{% endblock content %}

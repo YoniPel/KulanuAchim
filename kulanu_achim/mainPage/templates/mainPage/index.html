@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+{% load static %}
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="עמותת לתת כי כולנו אחים"/>
+    <meta name="author" content="כולנו אחים"/>
+
+    <!-- Favicon-->
+    <link rel="icon" href="{% static 'assets/img/favicon/favicon.ico' %}" type="image/x-icon" sizes="196x196">
+
+    <title>כולנו אחים</title>
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet"/>
+
+    <!-- Swiper CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- For additional link -->
+    {% block additional_links %}{% endblock %}
+
+</head>
+<!-- This is where the background should be: background=""-->
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="d-none d-lg-block">
+            <a href="{% url 'homePage' %}" class="custom-button-brightness">
+                <img src="{% static 'assets/img/small_icons/koolanooAchimSmallImage.png' %}" alt="כולנו אחים לוגו קטן"
+                     width="170" height="auto">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'homePage' %}">עמוד ראשי</a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'aboutPage' %}">אודות</a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'staffPage' %}">סגל</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'activitiesPage' %}">פעילות
+                    העמותה</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'helpPage' %}">פנו לסיוע</a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                                        href="{% url 'volunteerPage' %}">התנדבות</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contactPage' %}">צור קשר</a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'donationPage' %}">תרומות</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page Header-->
+<header class="masthead"
+        style="background-image:
+                url('{% block header_image %}{% static 'assets/img/page_backgrounds/homeImage.jpeg' %}{% endblock %}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    {% if request.path == '/' %}
+                    <span class="subheading">לתת כי</span>
+                    {% endif %}
+                    <h1>
+                        {% block header_title %}
+                        כולנו אחים
+                        {% endblock %}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <div class="col-md-8">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</main>
+<!-- Footer-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <hr class="my-7"/>
+            <ul class="list-inline text-center">
+		<li class="list-inline-item">
+			<a href="https://www.linkedin.com/in/kulanu-achim-5996372a5/"
+        	               class="custom-button-contact">
+				<span class="fa-stack fa-lg">
+        	                                <i class="fas fa-circle fa-stack-2x"></i>
+                	                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                        	</span>
+			</a>
+		</li>
+                <li class="list-inline-item">
+                    <a href="https://api.whatsapp.com/send/?phone=972528099135&text&type=phone_number&app_absent=0"
+                       class="custom-button-contact">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                                    </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/koolanoo.achim">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/Koolanoo.Achim">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="small text-center text-muted fst-italic"> לתת כי כולנו אחים &copy; כל הזכויות שמורות</div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

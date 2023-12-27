@@ -1,0 +1,49 @@
+{% extends "mainPage/index.html" %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/activitiesImage.jpg' %}{% endblock %}
+{% block header_title %}קמפיין חנוכה{% endblock %}
+
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-12">
+    <h2>קמפיין חנוכה</h2>
+    <hr class="my-4"/>
+    <p>
+        בחג החנוכה, עמותת כולנו אחים פותחת בהכנות במטרה לחלק עשרות ערכות חנוכה לציבור הרחב ועבור בתי החולים.
+        הערכות נארזות ע"י מאות תלמידי בתי ספר ובנות שרות.
+        קמפיין זה יוצא לפועל מתוך רצון לשמח את המשפחות ולזכות אותן לחגוג את החג לאור נרות החנוכיה.
+    </p>
+    <p>
+        במהלך החג, העמותה מציבה כמה מוקדי פעילות בעיר לחלוקת הערכות לציבור במטרה לאפשר לתושבים לקיים את מצוות החג
+        ולהעלאת המודעות, בתקווה לגידול במספר המתנדבים.
+    </p>
+    <p>
+        הערכות למשפחות הנזקקות כוללות חנוכיות אכותיות, סופגניות, ופתילי נרות לחג,
+        בנוסף לסל המזון השבועי, כדי שכולן יוכלו לחגוג את החג כראוי.
+    </p>
+
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <!-- Your embedded video player code -->
+    <div class="fb-video"
+         data-href="https://fb.watch/oMmdNMGIgC/"
+         data-width="700" data-height="500" data-show-text="false">
+        <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://fb.watch/oMmdNMGIgC/">
+                <a href="https://fb.watch/oMmdNMGIgC/">
+                    קמפיין חנוכה 2022</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <p>גאים להגיד שבחנוכה 2023 חילקנו מאות ערכות חנוכה לתושבי המרכז.</p>
+    <div class="image-container">
+        <img src="{% static 'assets/img/campaign_images/hanukkah/image1.jpg' %}">
+        <img src="{% static 'assets/img/campaign_images/hanukkah/image2.jpg' %}">
+        <img src="{% static 'assets/img/campaign_images/hanukkah/image3.jpg' %}">
+    </div>
+
+
+</div>
+{% endblock content %}

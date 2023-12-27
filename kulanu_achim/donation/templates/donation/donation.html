@@ -1,0 +1,71 @@
+{% extends "mainPage/index.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/donationImage.jpg' %}{% endblock %}
+{% block header_title %}מוציאים לדרך חדשה{% endblock %}
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-7">
+    <!-- Post preview-->
+    <div class="post-preview">
+        <a>
+            <h2 class="post-title">רוצים לתרום?</h2>
+            <hr class="my-4"/>
+            <p>
+                לתרומה באמצעות:
+                <img class='image' src="{% static 'assets/img/small_icons/payment_methods.png' %}"
+                style="width: 275px; margin-right: 0px;">
+            </p>
+            <a href="https://meshulam.co.il/s/426d0eae-dba5-7cd4-aa2e-3c48b874e60f">
+                <button class="Btn">
+                    לחץ כאן
+                    <svg class="svgIcon" viewBox="0 0 576 512">
+                        <path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path>
+                    </svg>
+                </button>
+            </a>
+            <hr class="my-4"/>
+
+            <p>
+                לתרומה באמצעות:
+                <img class='image' src="{% static 'assets/img/small_icons/PayPal.png' %}" style="width: 175px;">
+            </p>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=E6H8ERH3TYMTE">
+                <button class="Btn">
+                לחץ כאן
+                <svg class="svgIcon" viewBox="0 0 576 512">
+                    <path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path>
+                </svg>
+                </button>
+            </a>
+
+            <hr class="my-4"/>
+            להעברה בנקאית:
+            <div class="icon-heading-container">
+                <a class="custom-button-brightness">
+                    <img class='image' src="{% static 'assets/img/small_icons/bank.png' %}" alt='בנק'
+                         style="width: 60px; height=70px; margin-left: 10px; margin-right: 5px;">
+                </a>
+                <p>
+                    לתת כי כולנו אחים
+                    <br>
+                    בנק: לאומי
+                    <br>
+                    סניף: 939
+                    <br>
+                    חשבון: 6054503
+                </p>
+            </div>
+
+            <hr class="my-4"/>
+
+            <h3>רוצים לתרום פריטים שכבר לא בשימוש?</h3>
+            <a href="{% url 'donationItemsPage' %}">
+                <button class="btn btn-success mt-2" type="submit">לחצו כאן</button>
+            </a>
+        </a>
+    </div>
+</div>
+{% endblock content %}

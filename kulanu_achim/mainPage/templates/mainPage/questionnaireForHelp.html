@@ -1,0 +1,26 @@
+{% extends "mainPage/index.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/helpImage.jpg' %}{% endblock %}
+{% block header_title %}סיוע{% endblock %}
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-7">
+    <!-- Post preview-->
+    <div class="post-preview">
+        <a>
+            <h2 class="post-title">זקוקים לסיוע?</h2>
+            <h3 class="post-subtitle"> אל דאגה, הפרטים ישארו חסויים</h3>
+            <button class="btn btn-success mt-2" type="submit">שלח</button>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-success mt-2" type="submit">שלח</button>
+            </form>
+            <br>
+        </a>
+    </div>
+</div>
+{% endblock content %}

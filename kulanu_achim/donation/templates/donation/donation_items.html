@@ -1,0 +1,18 @@
+{% extends "mainPage/index.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/donationImage.jpg' %}{% endblock %}
+{% block header_title %}מוציאים לדרך חדשה{% endblock %}
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-7">
+    <h1>אנא מלא את הפרטים הבאים</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-success mt-2" type="submit">שלח</button>
+    </form>
+</div>
+{% endblock content %}

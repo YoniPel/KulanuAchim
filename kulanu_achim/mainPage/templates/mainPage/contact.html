@@ -1,0 +1,41 @@
+{% extends "mainPage/index.html" %}
+{% load static %}
+
+{% block header_image %}{% static 'assets/img/page_backgrounds/contactImage.jpg' %}{% endblock %}
+{% block header_title %}צור קשר{% endblock %}
+
+
+{% block content %}
+<!-- Main Content-->
+<div class="col-md-10 col-lg-8 col-xl-7">
+    <h2>איך אפשר ליצור איתנו קשר</h2>
+    <hr class="my-4"/>
+    <a href="https://api.whatsapp.com/send/?phone=972528099135&text&type=phone_number&app_absent=0"
+       class="icon-contact">
+        <div class="icon-heading-container">
+            <img class='image' src="{% static 'assets/img/small_icons/whatsapp.png' %}" alt='ווצאפ'
+                 style="width: 40px; height=auto; margin-left: 15px; margin-right: 0px;">
+            <p>052-8099135</p>
+        </div>
+    </a>
+
+    <hr>
+    <a href="https://www.facebook.com/Koolanoo.Achim"
+       class="icon-contact">
+        <div class="icon-heading-container">
+            <img class='image' src="{% static 'assets/img/small_icons/facebook.png' %}" alt='פייסבוק'
+                 style="width: 40px; height=auto; margin-left: 15px; margin-right: 0px;">
+            <p>כולנו אחים</p>
+        </div>
+    </a>
+
+    <hr>
+    <div class="icon-contact">
+        <div class="icon-heading-container">
+            <img class='image' src="{% static 'assets/img/small_icons/mail.png' %}" alt='מייל'
+                 style="width: 45px; height=auto; margin-left: 15px; margin-right: 0px;">
+            <p>koolanoo.achim@gmail.com</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
