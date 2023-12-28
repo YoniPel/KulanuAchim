@@ -1,4 +1,4 @@
-# KulanuAchim
+# KulanuAchim - development code
 This is the Django code for the development Kulanu Achim website.
 
 ## Requirements
