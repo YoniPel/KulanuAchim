@@ -1,5 +1,5 @@
-# KulanuAchim
-This is the Django code for the Kulanu Achim website
+# KulanuAchim - production code 
+This is the Django code for the Kulanu Achim website.
 
 ## Requirements
 * Django version 4.2.6
