@@ -27,7 +27,7 @@ class ContactInfo(models.Model):
 
     class Meta:
         verbose_name = 'מתנדב'
-        verbose_name_plural = "מתנדבים"
+        verbose_name_plural = "בקשות להתנדבות"
 
 
 class Volunteer(models.Model):
@@ -36,16 +36,27 @@ class Volunteer(models.Model):
     phone_number = models.CharField(max_length=10, verbose_name='מספר טלפון')
 
     ROLE_CHOICES = [
-        ('option1', 'בעל מקצוע (יועץ כלכלי, מאמן אישי, מורה פרטי, פסיכולוג, קלינאי תקשורת)'),
-        ('option2', 'ארגון מקצועי'),
-        ('option3', 'מוסד חינוכי (התנדבות של תלמידים)'),
-        ('option4', 'נהג חלוקה'),
-        ('option5', 'אחר (פרט בהודעה)'),
-
+        ('option1', 'מנכ"ל (הנהלה)'),
+        ('option2', 'סמנכ"ל (הנהלה)'),
+        ('option3', 'מנהל רכש (הנהלה)'),
+        ('option4', 'מנהל תקשורת משפחות (הנהלה)'),
+        ('option5', 'מנהל כוח אדם ופעילות שוטפת (הנהלה)'),
+        ('option6', 'מנהל כספים (הנהלה)'),
+        ('option7', 'מנהל ייעוץ וחינוך כלכלי (הנהלה)'),
+        ('option8', 'עורך דין'),
+        ('option9', 'רואה חשבון'),
+        ('option10', 'נהג חלוקה (פעילות שוטפת)'),
+        ('option11', 'אורז סלי מזון (פעילות שוטפת)'),
+        ('option12', 'מעצב גרפי (פעילות שוטפת)'),
+        ('option13', 'מתכנת (פעילות שוטפת)'),
+        ('option14', 'בעל מקצוע (יועץ כלכלי, מאמן אישי, מורה פרטי, פסיכולוג, קלינאי תקשורת)'),
+        ('option15', 'ארגון מקצועי'),
+        ('option16', 'מוסד חינוכי (התנדבות של תלמידים)'),
+        ('option17', 'אחר (פרט בהודעה)'),
     ]
     role = models.CharField(max_length=20, choices=ROLE_CHOICES, verbose_name='תפקיד')
 
-    message = models.TextField(verbose_name='הערות')
+    message = models.TextField(verbose_name='הערות', null=True, blank=True)
 
     def __str__(self):
         return self.name
